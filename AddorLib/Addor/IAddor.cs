@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AddorLib
+namespace AddorLib.Addor
 {
     public interface IAddor
     {

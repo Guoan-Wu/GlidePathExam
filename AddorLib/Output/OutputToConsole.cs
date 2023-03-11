@@ -1,10 +1,11 @@
-﻿using System;
+﻿using AddorLib.Addor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AddorLib
+namespace AddorLib.Output
 {
     public class OutputToConsole : IOutput
     {
@@ -31,7 +32,7 @@ namespace AddorLib
             var fFormat = (string s, int index, bool last) =>
             {
                 int len = _header[index].Length;
-                string format = "{0,-" + (len).ToString() + "}";
+                string format = "{0,-" + len.ToString() + "}";
                 string s2 = string.Format(format, _border + " " + s);
                 if (last)
                 {
@@ -46,16 +47,19 @@ namespace AddorLib
 
             int index = 0;
             string s = data.PrevValue?.ToString() ?? "";
-            fFormat(s, index, false); index++;
+            fFormat(s, index, false); 
+            index++;
 
             s = data.InputValue.ToString();
-            fFormat(s, index, false); index++;
+            fFormat(s, index, false); 
+            index++;
 
             s = data.Act ?? "";
-            fFormat(s, index, false); index++;
+            fFormat(s, index, false); 
+            index++;
 
             s = data.NewValue.ToString();
-            fFormat(s, index, true); index++;
-        }
+            fFormat(s, index, true); 
+        }      
     }
 }

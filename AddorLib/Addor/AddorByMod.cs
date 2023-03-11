@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AddorLib
+namespace AddorLib.Addor
 {
     public class AddorByMod : IAddor
     {
@@ -20,19 +20,20 @@ namespace AddorLib
 
         public int Add(int? prevValue, int inputValue)
         {
-            var fAct = (bool doSub) => {
+            var fAct = (bool doSub) =>
+            {
                 string s = "";
                 if (InputValue > 0) s += "+";
                 else if (InputValue < 0) s += "-";
                 s += InputValue.ToString();
                 if (doSub)
-                    s += (", -" + MaxValue.ToString());
+                    s += ", -" + MaxValue.ToString();
                 return s;
             };
             PrevValue = prevValue;
             InputValue = inputValue;
 
-            int newValue = (int)(PrevValue ?? 0) + InputValue;
+            int newValue = (PrevValue ?? 0) + InputValue;
             if (MaxValue != 0 && newValue > MaxValue)
             {
                 newValue %= MaxValue;

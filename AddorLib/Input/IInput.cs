@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AddorLib
+namespace AddorLib.Input
 {
     /// <summary>
     /// Interface for input. E.g., inputting from console.

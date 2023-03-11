@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AddorLib
+namespace AddorLib.NumberContainer
 {
     public class NumberFile : INumberContainer
     {
@@ -32,8 +32,8 @@ namespace AddorLib
                 return null;
             }
             if (s.Length != 1)
-                throw new ArgumentException("Error in {0}! The number's count must be 0 or 1.", nameof(ReadNumberAsync));            
-            
+                throw new ArgumentException("Error in {0}! The number's count must be 0 or 1.", nameof(ReadNumberAsync));
+
             int n = 0;
             return int.TryParse(s[0], out n) ? n : null;
         }
