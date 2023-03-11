@@ -12,8 +12,8 @@ This is the project for technical test of Glidepath.
 7.  Exit.
 Here are some example inputs and outputs
  '''
-| Previous value in file | User input value | Calculations | New value in file |\r\n
-|------------------------|------------------|--------------|-------------------|\r\n
+| Previous value in file | User input value | Calculations | New value in file |
+|------------------------|------------------|--------------|-------------------|
 |                        | 5                | +5           | 5                 |
 |5                       | 9                | +9           | 14                |
 |14                      | 130              | +130         | 144               |
